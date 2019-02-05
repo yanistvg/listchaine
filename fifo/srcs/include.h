@@ -8,4 +8,4 @@ typedef struct Chaine
   struct Chaine *suivant;
 } chaine_t;
 
-void creerListe(chaine_t *liste);
+chaine_t *creerListe();

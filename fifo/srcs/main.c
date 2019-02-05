@@ -3,6 +3,7 @@
 int main(void)
 {
   chaine_t *liste;
-  creerListe(liste);
+  liste = creerListe();
+  printf("%d\n", liste->val);
   return 0;
 }
