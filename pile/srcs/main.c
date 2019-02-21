@@ -25,14 +25,15 @@ int main(void)
   }
   showCase(liste);
   i=0;
-  while (i!=5)
+  while (i!=6)
   {
     printf("\n0-show case\n");
     printf("1-add new Case\n");
     printf("2-delet case\n");
     printf("3-add new case after\n");
-    printf("4-modify value case\n");
-    printf("5-quit\n");
+    printf("4-add new case before\n");
+    printf("5-modify value case\n");
+    printf("6-quit\n");
     printf("\n> ");
     scanf("%d", &i);
     switch (i)
@@ -56,7 +57,18 @@ int main(void)
         liste = addCaseAfter(liste, e, y);
         break;
       case 4:
+        printf("\navant quelle case : ");
+        scanf("%d", &e);
+        printf("valeur de la nouvelle case : ");
+        scanf("%d", &y);
+        liste = addCaseBefore(liste, e, y);
         break;
+      case 5:
+        printf("\nquelle case a modify : ");
+        scanf("%d", &e);
+        printf("quelle est la nouvelle valeur : ");
+        scanf("%d", &y);
+        modifyCase(liste, e, y);
       default: break;
     }
     if (liste == NULL)

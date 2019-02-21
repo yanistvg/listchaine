@@ -17,3 +17,5 @@ void showCase(chaine_t *liste);
 chaine_t *deletCase(chaine_t *liste, int caseDelet);
 void quit(chaine_t *liste);
 chaine_t *addCaseAfter(chaine_t *liste, int i, int e);
+chaine_t *addCaseBefore(chaine_t *liste, int i, int e);
+void modifyCase(chaine_t *liste, int i, int e);

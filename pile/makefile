@@ -1,4 +1,4 @@
-NAME=fifo
+NAME=pile
 
 SRC=	srcs/main.c\
 	srcs/creerListe.c\
@@ -6,7 +6,9 @@ SRC=	srcs/main.c\
 	srcs/showCase.c\
 	srcs/deletCase.c\
 	srcs/quit.c\
-	srcs/addCaseAfter.c
+	srcs/addCaseAfter.c\
+	srcs/addCaseBefore.c\
+	srcs/modifyCase.c
 
 OBJ=	main.o\
 	creerListe.o\
@@ -14,7 +16,9 @@ OBJ=	main.o\
 	showCase.o\
 	deletCase.o\
 	quit.o\
-	addCaseAfter.o
+	addCaseAfter.o\
+	addCaseBefore.o\
+	modifyCase.o
 
 file:
 	gcc -c $(SRC)

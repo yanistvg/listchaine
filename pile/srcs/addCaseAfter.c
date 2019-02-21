@@ -3,38 +3,36 @@
 chaine_t *addCaseAfter(chaine_t *liste, int i, int e)
 {
   chaine_t *buffer;
-  chaine_t *precedent;
   chaine_t *new;
-  buffer = liste;
   int y=1;
-  buffer = buffer->suivant;
-  while (y++ != i && buffer->suivant != NULL && i!=1)
-  {
-    precedent = precedent->suivant;
+  buffer = liste;
+  while (y++ != i && buffer->suivant != NULL && i!=0)
     buffer = buffer->suivant;
-  }
+  y--;
   if (y == i && buffer->suivant == NULL)
   {
     new = malloc(sizeof(chaine_t));
     new->val = e;
-    new->suivant = buffer;
-    buffer->suivant = NULL;
+    new->suivant = NULL;
+    buffer->suivant = new;
     return liste;
   }
-  if (y == i && buffer->suivant != NULL && i!=1)
+  if (y == i && buffer->suivant != NULL && i!=0)
   {
     new = malloc(sizeof(chaine_t));
     new->val = e;
-    new->suivant = buffer;
-    precedent->suivant = new;
+    new->suivant = buffer->suivant;
+    buffer->suivant = new;
     return liste;
   }
-  if (i == 1)
+  if (i == 0)
   {
     new = malloc(sizeof(chaine_t));
     new->val = e;
     new->suivant = liste;
     liste = new;
+    return liste;
   }
+  printf("erreur la case n'existe pas\n");
   return liste;
-}  // changer le code pour que se soit apres la case choisi
+}
