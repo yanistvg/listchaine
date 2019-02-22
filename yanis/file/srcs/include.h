@@ -16,3 +16,5 @@
 chaine_t *creatCase(int i);
 void showFile(chaine_t *liste);
 void quit(chaine_t *liste);
+chaine_t *addCase(chaine_t *liste, int i);
+chaine_t *deletCase(chaine_t *liste, int i);

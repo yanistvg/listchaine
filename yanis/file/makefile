@@ -1,12 +1,16 @@
 SRC = 	srcs/main.c\
 	srcs/creatCase.c\
 	srcs/quit.c\
-	srcs/showFile.c
+	srcs/showFile.c\
+	srcs/addCase.c\
+	srcs/deletCase.c
 
 OBJ =	main.o\
 	creatCase.o\
 	quit.o\
-	showFile.o
+	showFile.o\
+	addCase.o\
+	deletCase.o
 
 NAME = file
 
